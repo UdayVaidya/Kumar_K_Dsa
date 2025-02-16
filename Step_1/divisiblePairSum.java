@@ -16,6 +16,7 @@ public class divisiblePairSum {
             
         return count;
     }
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String args[]) {
       
       Scanner sc = new Scanner(System.in);
@@ -31,6 +32,7 @@ public class divisiblePairSum {
       
       int result = arrSum(n,k,arr);
       
+      sc.close();
       System.out.println(result);
     }
 }
