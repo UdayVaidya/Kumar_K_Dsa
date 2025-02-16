@@ -20,39 +20,32 @@ public class electronicShop {
         
         return mx;
     }
-    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String args[]) {
       
       
-      Scanner in = new Scanner(System.in);
+        int b;
+        ArrayList<Integer> keyBoards ;
+        ArrayList<Integer> drives ;
+        try (Scanner in = new Scanner(System.in)) {
+            int n ;
+            int k ;
+            b= in.nextInt();
+            n = in.nextInt();
+            k = in.nextInt();
+            keyBoards = new ArrayList<>();
+            drives = new ArrayList<>();
+            for(int i=0; i<n; i++){
+                int num = in.nextInt();
+                keyBoards.add(num);
+            }     for(int i=0; i<k; i++){
+                int numi = in.nextInt();
+                drives.add(numi);
+            } }
       
-      int b ; 
-      int n ;
-      int k ;
-      b= in.nextInt();
-      n = in.nextInt();
-      k = in.nextInt();
-      
-      ArrayList<Integer> keyBoards = new ArrayList<>();
-      
-      ArrayList<Integer> drives = new ArrayList<>();
-      
-      for(int i=0; i<n; i++){
-        int num = in.nextInt();
-        keyBoards.add(num);
-      }
-      
-      for(int i=0; i<k; i++){
-        int numi = in.nextInt();
-        drives.add(numi);
-      }
-      
-      in.close();
-      
-      int result = electronicShop1(b,keyBoards,drives);
+        int result = electronicShop1(b,keyBoards,drives);
       
       
       
-      System.out.println(result);
+        System.out.println(result);
     }
 }

@@ -16,23 +16,18 @@ public class divisiblePairSum {
             
         return count;
     }
-    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String args[]) {
       
-      Scanner sc = new Scanner(System.in);
-      int n = sc.nextInt();
-      int k = sc.nextInt(); 
-      
-      ArrayList<Integer> arr = new ArrayList<>();
-      
-      for(int i = 0; i < n; i++ ){
-        int num = sc.nextInt();
-        arr.add(num);
-      }
-      
-      int result = arrSum(n,k,arr);
-      
-      sc.close();
+        int result;
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            int k = sc.nextInt();
+            ArrayList<Integer> arr = new ArrayList<>();
+            for(int i = 0; i < n; i++ ){
+                int num = sc.nextInt();
+                arr.add(num);
+            }     result = arrSum(n,k,arr);
+        }
       System.out.println(result);
     }
 }
