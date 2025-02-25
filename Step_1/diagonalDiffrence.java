@@ -51,6 +51,8 @@ public class diagonalDiffrence {
         }
       }
 
+      
+
       in.close();
 
       System.out.println(diagonalDiffrenceFunc1(arr));
