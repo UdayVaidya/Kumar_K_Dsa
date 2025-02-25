@@ -36,24 +36,21 @@ public class diagonalDiffrence {
 
       return Math.abs(left_sum - right_sum);
     }
+    @SuppressWarnings("Convert2Diamond")
     public static void main(String args[]) {
       
       
-      Scanner in = new Scanner(System.in);
-      int n = in.nextInt();
-      ArrayList<ArrayList<Integer>> arr = new ArrayList<ArrayList<Integer>>();
-
-      for(int i=0;i<n;i++){
-        arr.add(new ArrayList<Integer>());
-        for(int j=0;j<n;j++){
-            int num=in.nextInt();
-            arr.get(i).add(num);
-        }
-      }
-
-      
-
-      in.close();
+        ArrayList<ArrayList<Integer>> arr;
+        try (Scanner in = new Scanner(System.in)) {
+            int n = in.nextInt();
+            arr = new ArrayList<ArrayList<Integer>>();
+            for(int i=0;i<n;i++){
+                arr.add(new ArrayList<>());
+                for(int j=0;j<n;j++){
+                    int num=in.nextInt();
+                    arr.get(i).add(num);
+                }
+            } }
 
       System.out.println(diagonalDiffrenceFunc1(arr));
     }

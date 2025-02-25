@@ -25,16 +25,14 @@ public class breakingRecords {
   public static void main(String args[]) {
       
       
-    Scanner in = new Scanner(System.in);
-    ArrayList<Integer> arr = new ArrayList<>();
-    int n = in.nextInt();
-
-    for(int i=0; i<n; i++){
-      int temp = in.nextInt();
-      arr.add(temp);
-    }
-
-    in.close();
+      ArrayList<Integer> arr;
+      try (Scanner in = new Scanner(System.in)) {
+          arr = new ArrayList<>();
+          int n = in.nextInt();
+          for(int i=0; i<n; i++){
+              int temp = in.nextInt();
+              arr.add(temp);
+          } }
     breakingRecordsFunc(arr);
     
   }

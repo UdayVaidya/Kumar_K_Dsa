@@ -27,19 +27,18 @@ public class subarrayDivision {
     public static void main(String args[]) {
       
       
-      Scanner in = new Scanner(System.in);
-      ArrayList<Integer> arr = new ArrayList<Integer>();
-      int n = in.nextInt();
-      
-      for(int i= 0; i<n ; i++){
-        int temp = in.nextInt();
-        arr.add(temp);
-      }
-      
-      int d = in.nextInt();
-      int m = in.nextInt();
-
-      in.close();
+        ArrayList<Integer> arr;
+        int d;
+        int m;
+        try (Scanner in = new Scanner(System.in)) {
+            arr = new ArrayList<>();
+            int n = in.nextInt();
+            for(int i= 0; i<n ; i++){
+                int temp = in.nextInt();
+                arr.add(temp);
+            }     d = in.nextInt();
+            m = in.nextInt();
+        }
       
       int result = subarrayDivisionFunc(d,m,arr);
       

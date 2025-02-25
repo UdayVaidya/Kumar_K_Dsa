@@ -26,14 +26,15 @@ public class migratoryBirds {
     public static void main(String args[]) {
       
       
-      Scanner in = new Scanner(System.in);
-      int n=in.nextInt();
-      ArrayList<Integer>arr=new ArrayList<>();
-      for(int i=0;i<n;i++){
-        int value=in.nextInt();
-        arr.add(value);
-      }
-      
+        int n;
+        ArrayList<Integer> arr;
+        try (Scanner in = new Scanner(System.in)) {
+            n = in.nextInt();
+            arr = new ArrayList<>();
+            for(int i=0;i<n;i++){
+                int value=in.nextInt();
+                arr.add(value);
+            } }
       int result = migratoryBirdsFunc(n,arr);
       System.out.println(result);
     }
