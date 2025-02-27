@@ -22,17 +22,13 @@ public class countingOfValleys {
 
     @SuppressWarnings("unused")
     public static void main(String args[]) {
-        Scanner in = new Scanner(System.in);
-        
-        int n = in.nextInt();
-        in.nextLine();  // Fix: Consume leftover newline
-        
-        String s = in.nextLine();
-        
-        int result = countingOfValleysFunc(s);
-        
-        System.out.println(result);
-
-        in.close();  // Fix: Close Scanner to prevent resource leaks
+        try (Scanner in = new Scanner(System.in)) {
+            int n = in.nextInt();
+            in.nextLine();  // Fix: Consume leftover newline
+            String s = in.nextLine();
+            int result = countingOfValleysFunc(s);
+            System.out.println(result);
+            // Fix: Close Scanner to prevent resource leaks
+        }
     }
 }
