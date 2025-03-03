@@ -2,12 +2,12 @@ import java.util.*;
 
 public class pattern{
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of rows: ");
-        int n = sc.nextInt();   
-        pattern p = new pattern();    
-        p.patternNumber11(n);
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the number of rows: ");
+            int n = sc.nextInt();
+            pattern p = new pattern();
+            p.patternNumber11(n);
+        }
     }
 
     public void patternNumber1(int n){

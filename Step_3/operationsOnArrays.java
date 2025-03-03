@@ -1,3 +1,6 @@
+package Step_3;
+
+
 public class operationsOnArrays {
 
     public int[] applyOperations(int[] nums) {
