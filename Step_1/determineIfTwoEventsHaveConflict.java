@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class determineIfTwoEventsHaveConflict {
     public boolean haveConflict(String[] event1, String[] event2) {
         String start1  = event1[0], end1 = event1[1];
